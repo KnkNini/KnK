@@ -1,0 +1,16 @@
+//set $mode to 0 to activate animation brush and 1 to desactivate
+int $mode = 1-$mode;
+switch ($mode) {
+ case 0:
+    print "\nALL ANIMATION DEFORMER ACTIVATED";
+ break;
+ case 1:
+    print "\nALL ANIMATION DEFORMER DESACTIVATED";
+ break;
+}
+string $lat[] = `ls -type ffd`;
+string $twist[] = `ls -type nonLinear`;
+string $item;
+for ($item in stringArrayCatenate($lat,$twist)){
+    setAttr ($item+".nodeState") $mode;
+}

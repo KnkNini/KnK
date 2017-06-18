@@ -1,0 +1,22 @@
+
+"""
+
+PySide/ PyQt4 maya 2017
+
+from Pyside2 import QtWidgets
+
+
+
+Exemple:
+
+class myWindow(QtWidgets.QWidget):
+	def __init__(self, parent=None):
+		QtWidgets.QWidget.__init__(self, parent)
+		
+		QWidget = QtWidgets.Qwidget
+		QPushButton = QtWidgets.QPushButton
+		QHLayout = QtWidgets.QHLayout
+	
+
+"""
+

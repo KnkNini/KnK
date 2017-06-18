@@ -1,0 +1,24 @@
+Pour les nostalgiques de l'hypershade de maya 2014:
+
+copier 
+
+MAYA_ENABLE_LEGACY_HYPERSHADE=1
+
+dans le fichier Maya.env (Documents/maya/2017)
+
+
+Afficher le work area 2014 en cliquant sur l icone top/bottom tabs dans l hypershade
+
+Pour hider le node editor:
+
+
+
+créer shelf avec commande:
+
+nodeEditor -edit -unParent hyperShadePrimaryNodeEditor; # desactive node editor 2016
+
+
+
+en double clic: # Re active node editor 2016
+
+nodeEditor -edit -parent "hyperShadePanel1dockStation||nodeEditorForm|mainPane" hyperShadePrimaryNodeEditor;

@@ -1,0 +1,9 @@
+string $skinned[] = `ls -type skinCluster`;
+string $item;
+string $transforms[];
+for ($item in $skinned){
+    $transforms = `skinCluster -q -g $item`;
+    select $transforms[0];
+    removeUnusedInfluences;
+}
+    
