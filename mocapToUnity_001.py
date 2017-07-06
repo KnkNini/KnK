@@ -8,7 +8,6 @@ import maya.mel as mel
 from pymel import core
 from os import listdir
 from maya import OpenMayaUI as omui
-
 try:
     from PySide2.QtGui import *
     from PySide2.QtCore import *
@@ -24,7 +23,6 @@ except:
 ptr = omui.MQtUtil.mainWindow()
 mayaMainWindow = wrapInstance(long(ptr), QtWidgets.QWidget)
 
-
 class mocapToUnity(QtWidgets.QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self, parent)
@@ -33,10 +31,6 @@ class mocapToUnity(QtWidgets.QWidget):
         self.setWindowTitle("mocapToUnity")
         self.setMinimumWidth(300)
         self.setMinimumHeight(200)
-        
-        """self.testBtn = QPushButton()
-        self.testBtn.setText("TEST")
-        self.testBtn.clicked.connect(self.test)"""
         
         self.openFbxLbl = QLabel(self)
         self.openFbxLbl.setText("Choose .fbx file to import:")
@@ -99,7 +93,7 @@ class mocapToUnity(QtWidgets.QWidget):
         #selCrvs = self.getSelCurves()
         #crvs = self.getAllCurves()
         #self.snapKeys()
-        #self.simplifyCrvs(type=dense, time=0.2, value=0.2)
+        #self.simplifyCrvs(type=dense, time=0.2, value=0.2)(change qle)
         #self.snapKeys()
         #self.bakeChannel(*unsnapKeys)
         print 'cleanFbx'
@@ -119,8 +113,3 @@ if __name__ == "__main__":
         ui.show()
     else:
         ui.show()
-
-
-
-
-
